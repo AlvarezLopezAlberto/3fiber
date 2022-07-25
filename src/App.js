@@ -30,7 +30,7 @@ function App() {
       <PresentationControls global cursor={false}  polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 4, Math.PI / 4]}>
         <Lights/>
           <Suspense fallback={null}>
-            <Room scale={[0.25,0.25,0.25]} rotation={[0,Math.PI/2,0]} position={[0,-1,0]}/>
+            <Room scale={[0.25,0.25,0.25]} rotation={[0,Math.PI/2,0]} position={[-0.2,-1,0]}/>
             <WifiAnimation position={[1,0,0]}/>
           </Suspense>
           </PresentationControls>
