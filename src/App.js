@@ -5,6 +5,7 @@ import Room from './assets/Room';
 import Wifi from './assets/Wifi'
 import Lights from './assets/Lights';
 
+
 function WifiAnimation() {
   const mesh = React.useRef();
 
@@ -26,12 +27,25 @@ function App() {
     <div
     className='Container'
     style={{width: "100%", height:"100vh"}}>
-      <Canvas flat camera={{fov:35, position:[6,4,10]}}>
-      <PresentationControls global cursor={false}  polar={[0,0]} azimuth={[-Math.PI / 4, Math.PI / 5]}>
-        <Lights/>
-          <Suspense fallback={null}>
-            <Room scale={[0.25,0.25,0.25]} rotation={[0,Math.PI/2,0]} position={[-0.2,-1,0]}/>
-            <WifiAnimation position={[1,0,0]}/>
+      <Canvas
+        camera={{fov:35, position:[5,4,10]}}>
+      <PresentationControls 
+        global 
+        cursor={false}  
+        polar={[0,0]} 
+        azimuth={[-Math.PI / 4, Math.PI / 4]} 
+        config={{mass: 0.8, tension: 250, friction: 15}}>
+      <Lights/>
+          <Suspense 
+            fallback={null}>
+            <Room  
+              scale={[0.25,0.25,0.25]} 
+              rotation={[0,Math.PI/2,0]} 
+              position={[-0.2,-1,0]}
+            />
+            <WifiAnimation 
+              position={[1,0,0]}
+            />
           </Suspense>
           </PresentationControls>
       </Canvas>
