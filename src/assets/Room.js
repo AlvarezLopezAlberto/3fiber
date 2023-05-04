@@ -9,7 +9,7 @@ export default function Model({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/imbera-freezer-room-v2.gltf");
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
         <mesh
           castShadow

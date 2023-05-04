@@ -1,15 +1,18 @@
 import React from "react";
-import { Environment } from "@react-three/drei";
+import { ContactShadows, Environment } from "@react-three/drei";
 
 
 const Lights = () => {
     return (
         <>
             <ambientLight 
-                intensity={0.8}
+                intensity={0.9}
             />
             <Environment 
                 preset="city" 
+            />
+            <ContactShadows
+                ContactShadows="true"
             />
         </>
     )
