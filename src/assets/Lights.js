@@ -9,7 +9,7 @@ const Lights = () => {
                 intensity={0.9}
             />
             <Environment 
-                preset="city" 
+                files=".\potsdamer_platz_1k.hdr"
             />
             <ContactShadows
                 ContactShadows="true"
